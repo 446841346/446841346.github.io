@@ -2,11 +2,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 
 module.exports = {
 	output: {
-		filename: '[name].[chunkhash].js',
+		filename: './js/[name].[chunkhash].js',
 		path: path.resolve(__dirname, 'dist')
 	},
 	plugins: [
@@ -20,8 +21,11 @@ module.exports = {
 
 		//打包css js 到html内（可定义多个html）
 		new HtmlWebpackPlugin({
-			title: 'Output Management'
+			filename : 'index.html',
+			template: path.join(__dirname, 'index.html')
 		}),
+
+		new ExtractTextPlugin('./style/style.css'),
 
 		//把公用部分独立打包
 		new webpack.optimize.CommonsChunkPlugin({
