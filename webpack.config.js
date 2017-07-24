@@ -4,19 +4,27 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = (env) => {
 	let config = {
 		entry: {
-			app : './src/index.js'
+			app : './src/app.js'
 		},
 		output: {
 			filename: '[name].bundle.js',
-			path: path.resolve(__dirname, 'dist')
+			path: path.resolve(__dirname, 'dist'),
+			publicPath : '/'
 		},
-		
+		resolve: {
+        	extensions: ['.json', '.js', '.vue','.less']
+		},
 		module: {
 			rules: [
 				{
 					test:/\.js$/,
 					use:['babel-loader'],
-					exclude:'/node_modules'
+					exclude:'/node_modules/'
+				},
+				{
+					test:/\.vue$/,
+					use:['vue-loader'],
+					exclude:'/node_modules/'
 				},
 				{
 					test: /\.css$/,
@@ -32,11 +40,11 @@ module.exports = (env) => {
 				{
 					test:/\.(png|svg|jpg|gif)$/,
 					use:[
-						'url-loader?limit=8192&name=[name][chunkhash].[ext]'
+						'url-loader?limit=8192&name=images/[name][hash].[ext]'
 					]
 				}
 			]
-		}
+		},
 
 	};
 	switch (env){

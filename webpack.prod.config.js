@@ -8,7 +8,8 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
 	output: {
 		filename: './js/[name].[chunkhash].js',
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, 'dist'),
+		publicPath : '/'
 	},
 	plugins: [
 		//每次打包先清空dist
