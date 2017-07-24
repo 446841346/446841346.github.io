@@ -22,8 +22,8 @@ module.exports = {
 
 		//打包css js 到html内（可定义多个html）
 		new HtmlWebpackPlugin({
-			filename : 'index.html',
-			template: path.join(__dirname, 'index.html')
+			filename : '../index.html',
+			template: path.join(__dirname, 'template.html')
 		}),
 
 		new ExtractTextPlugin('style/style.[chunkhash].css'),

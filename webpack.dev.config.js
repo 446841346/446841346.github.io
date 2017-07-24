@@ -13,7 +13,7 @@ module.exports = {
 		new ExtractTextPlugin('./style/style.css'),
 
 		new HtmlWebpackPlugin({
-			'template' : path.join(__dirname, 'index.html'),
+			'template' : path.join(__dirname, 'template.html'),
 			'files' : {
 				'js':['app.bundle.js'],
 				'css':['./dist/style/style.css']
