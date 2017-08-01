@@ -1,36 +1,25 @@
 <script>
-import { actions } from '../store';
+import { mapGetters } from 'vuex';
+import Navigation from './navigation';
+import Home from './home';
 
 export default {
-    components: { },
-    vuex: {
+    components: { Navigation,Home},
+    computed: {
+        ...mapGetters({
+            currentState : 'getCurrentState'
+        })
     }
 }
 </script>
 
 <template>
 <div class="wraper">
-	<div class="nav">
-		<ul class="nav-li">
-			<li class="active"><a href="">HOME</a></li>
-			<li><a href="">ABOUT ME</a></li>
-			<li><a href="">EXPERIENCE</a></li>
-			<li><a href="">HOBBIES</a></li>
-			<li><a href="">CONTACT</a></li>
-		</ul>
-	</div>
-	<div class="left-mod">
-		<div class="pic-broad"></div>
-	</div>
+	<div class="home-broad" :class="{'home-pic':currentState == 'home'}"></div>
 	<div class="right-mod">
-		<div class="home">
-			<div class="home-dsc">
-				<h5 class="home-title">Welcome to my website</h5>
-				<h1 class="home-intro">Hello,I am LDW from GuangZhou</h1>
-				<p class="home-cont">This is my website include some of my career,education and my life.If you are interesting ,please click the below button to know more !</p>
-				<button class="home-start">Know more</button>
-			</div>
-		</div>
+		<navigation></navigation>
+		<router-view></router-view>
 	</div>
+	<div class="about-broad" :class="{'about-pic':currentState == 'about'}"></div>
 </div>
 </template>

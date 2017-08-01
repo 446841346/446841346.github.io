@@ -109,21 +109,38 @@ body {
 }
 .wraper {
   height: 100%;
+  background: #f1e2d7;
 }
-.left-mod {
+.home-broad {
   float: left;
   height: 100%;
+  width: 0;
+  background: url(/dist/images/tree-675073_19205fdfd3188594f1661914d20158531c8e.jpg);
+  transition: all ease 0.5s;
+}
+.home-broad.home-pic {
   width: 50%;
 }
-.left-mod .pic-broad {
+.about-broad {
+  position: absolute;
+  right: 0;
   height: 100%;
-  background: url(/dist/images/tree-675073_19205fdfd3188594f1661914d20158531c8e.jpg);
+  width: 50%;
+  background: url(/dist/images/trolley-2203329_1920ce4e63fce5fbdc5757c31bd072372ab8.jpg);
+  opacity: 0;
+  transition: opacity ease 1s;
+  background-size: cover;
+}
+.about-broad.about-pic {
+  opacity: 1;
 }
 .nav {
   position: absolute;
   right: 0;
+  top: 15px;
   font-family: 'Source Sans Pro', sans-serif;
   font-style: normal;
+  z-index: 1;
   display: block;
   zoom: 1;
 }
@@ -139,11 +156,8 @@ body {
   float: right;
   margin-right: 70px;
 }
-.nav .nav-li li {
-  float: left;
+.nav .nav-li a {
   margin: 15px;
-}
-.nav .nav-li li a {
   color: #666;
   font-size: 14px;
   font-weight: 400;
@@ -152,20 +166,20 @@ body {
   line-height: 40px;
   transition: all 0.4s ease-in-out;
 }
-.nav .nav-li li a:hover {
+.nav .nav-li a:hover {
   background-color: transparent;
   color: #E3AE57;
 }
-.nav .nav-li li.active a {
+.nav .nav-li a.active {
   color: #E3AE57;
 }
 .right-mod {
   float: left;
+  position: relative;
   height: 100%;
   width: 50%;
-  background: #f1e2d7;
 }
-.right-mod .home {
+.right-mod .home-mod {
   display: flex;
   display: -webkit-flex;
   height: 100%;
@@ -173,19 +187,23 @@ body {
   align-items: center;
   -webkit-align-items: center;
 }
-.right-mod .home .home-title {
+.right-mod .home-mod .home-dsc {
+  z-index: 1;
+}
+.right-mod .home-mod .home-title {
   color: #999;
 }
-.right-mod .home .home-intro {
+.right-mod .home-mod .home-intro {
   margin: 15px 0;
   font-size: 42px;
   font-weight: 300;
 }
-.right-mod .home .home-cont {
+.right-mod .home-mod .home-cont {
   color: #999;
   font-size: 14px;
 }
-.right-mod .home .home-start {
+.right-mod .home-mod .home-start {
+  display: inline-block;
   background-color: transparent;
   border: 3px solid #232B2B;
   border-radius: 100px;
@@ -198,8 +216,19 @@ body {
   transition: all 0.4s ease-in-out;
   text-transform: uppercase;
 }
-.right-mod .home .home-start:hover {
+.right-mod .home-mod .home-start:hover {
   background: #E3AE57;
   border-color: transparent;
   color: #fff;
+}
+.right-mod .about-mod {
+  padding-top: 65px;
+  margin: 0 40px;
+}
+.right-mod .about-mod .about-title {
+  font-size: 44px;
+}
+.right-mod .about-mod .about-top {
+  display: flex;
+  display: -webkit-flex;
 }
