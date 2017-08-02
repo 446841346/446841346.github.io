@@ -179,30 +179,31 @@ body {
   height: 100%;
   width: 50%;
 }
-.right-mod .home-mod {
+.home-mod {
   display: flex;
   display: -webkit-flex;
   height: 100%;
   margin: 0 40px;
   align-items: center;
   -webkit-align-items: center;
+  animation: fade-in 1s;
 }
-.right-mod .home-mod .home-dsc {
+.home-mod .home-dsc {
   z-index: 1;
 }
-.right-mod .home-mod .home-title {
+.home-mod .home-title {
   color: #999;
 }
-.right-mod .home-mod .home-intro {
+.home-mod .home-intro {
   margin: 15px 0;
   font-size: 42px;
   font-weight: 300;
 }
-.right-mod .home-mod .home-cont {
+.home-mod .home-cont {
   color: #999;
   font-size: 14px;
 }
-.right-mod .home-mod .home-start {
+.home-mod .home-start {
   display: inline-block;
   background-color: transparent;
   border: 3px solid #232B2B;
@@ -216,19 +217,63 @@ body {
   transition: all 0.4s ease-in-out;
   text-transform: uppercase;
 }
-.right-mod .home-mod .home-start:hover {
+.home-mod .home-start:hover {
   background: #E3AE57;
   border-color: transparent;
   color: #fff;
 }
-.right-mod .about-mod {
+.about-mod {
   padding-top: 65px;
   margin: 0 40px;
+  animation: fade-in 1s;
 }
-.right-mod .about-mod .about-title {
+.about-mod .about-title {
+  margin-top: 60px;
   font-size: 44px;
+  color: #999;
 }
-.right-mod .about-mod .about-top {
+.about-mod .about-me {
   display: flex;
   display: -webkit-flex;
+  margin: 20px 0;
+}
+.about-mod .about-me .me-pic {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  flex: 1;
+}
+.about-mod .about-me .avatar-pic {
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+  margin: 0 auto;
+  background: #999;
+  border-radius: 50%;
+}
+.about-mod .about-me .me-dsc {
+  flex: 3;
+}
+.about-mod .about-me .me-title {
+  font-size: 20px;
+  padding-bottom: 20px;
+  color: #666;
+}
+.about-mod .about-me .dsc-small {
+  font-size: 12px;
+  color: #999;
+}
+.about-mod .about-me .me-content {
+  font-size: 14px;
+  color: #666;
+  padding-bottom: 20px;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

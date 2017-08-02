@@ -139,57 +139,104 @@ html,body{
 	position:relative;
 	height: 100%;
 	width: 50%;
-	.home-mod{
-		display: flex;
+}
+
+.home-mod{
+	display: flex;
+	display: -webkit-flex;
+	height:100%;
+	margin: 0 40px;
+	align-items: center;
+    -webkit-align-items: center;
+    animation: fade-in 1s;
+    .home-dsc{
+    	z-index:1;
+    }
+    .home-title{
+	    color: #999;
+    }
+    .home-intro{
+	    margin: 15px 0;
+	    font-size: 42px;
+		font-weight: 300;
+    }
+    .home-cont{
+    	color:#999;
+    	font-size: 14px;
+    }
+    .home-start{
+    	display:inline-block;
+		background-color: transparent;
+		border: 3px solid #232B2B;
+		border-radius: 100px;
+		color: #232B2B;
+		font-size: 13px;
+		font-weight: bold;
+		letter-spacing: 1.6px;
+		padding: 12px 36px;
+		margin-top: 42px;
+		transition: all 0.4s ease-in-out;
+		text-transform: uppercase;
+    }
+    .home-start:hover{
+    	background: #E3AE57;
+	    border-color: transparent;
+	    color: #fff;
+    }
+}
+.about-mod{
+	padding-top: 65px;
+	margin: 0 40px;
+	animation: fade-in 1s;
+    .about-title{
+	    margin-top: 60px;
+    	font-size:44px;
+    	color:#999;
+    }
+    .about-me{
+    	display: flex;
 		display: -webkit-flex;
-		height:100%;
-		margin: 0 40px;
-		align-items: center;
-	    -webkit-align-items: center;
-	    .home-dsc{
-	    	z-index:1;
-	    }
-	    .home-title{
-    	    color: #999;
-	    }
-	    .home-intro{
-    	    margin: 15px 0;
-    	    font-size: 42px;
-			font-weight: 300;
-	    }
-	    .home-cont{
-	    	color:#999;
-	    	font-size: 14px;
-	    }
-	    .home-start{
-	    	display:inline-block;
-			background-color: transparent;
-			border: 3px solid #232B2B;
-			border-radius: 100px;
-			color: #232B2B;
-			font-size: 13px;
-			font-weight: bold;
-			letter-spacing: 1.6px;
-			padding: 12px 36px;
-			margin-top: 42px;
-			transition: all 0.4s ease-in-out;
-			text-transform: uppercase;
-	    }
-	    .home-start:hover{
-	    	background: #E3AE57;
-		    border-color: transparent;
-		    color: #fff;
-	    }
-	}
-	.about-mod{
-		padding-top: 65px;
-		margin: 0 40px;
-	    .about-title{
-	    	font-size:44px;
-	    }
-	    .about-top{
-	    	display: flex;
+		margin: 20px 0;
+		.me-pic{
+			display: flex;
 			display: -webkit-flex;
-	    }
-	}
+			align-items: center;
+		    -webkit-align-items: center;
+			flex:1;
+		}
+		.avatar-pic{
+			display: inline-block;
+		    height: 100%;
+		    width: 50%;
+		    margin: 0 auto;
+		    background: #999;
+		    border-radius: 50%;
+		}
+		.me-dsc{
+			flex:3;
+		}
+		.me-title{
+		    font-size: 20px;
+		    padding-bottom: 20px;
+			color: #666;
+		}
+		.dsc-small{
+			font-size:12px;
+			color:#999;
+		}
+		.me-content{
+			font-size: 14px;
+			color: #666;
+			padding-bottom: 20px;
+		}
+    }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
