@@ -14,14 +14,18 @@ const router = new VueRouter({
 	routes: [
 		{
 			path: '/',
-			component:Home
+			component:Home,
+			beforeEnter: (to, from, next) => {
+				store.dispatch('changeState','home');
+				next();
+			}
 		},
 		{
 			path:'/about',
 			component:About,
 			beforeEnter: (to, from, next) => {
 				store.dispatch('changeState','about');
-				next()
+				next();
 			}
 		}
 	]

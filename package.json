@@ -6,7 +6,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --env=bulid --progress",
     "watch": "webpack --progress --watch",
-    "dev": "webpack-dev-server --env=dev --open --hot --inline"
+    "dev": "webpack-dev-server --env=dev --open --hot --inline --colors"
   },
   "author": "",
   "license": "MIT",
