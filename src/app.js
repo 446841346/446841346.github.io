@@ -6,10 +6,11 @@ import VueRouter from 'vue-router';
 import App from './components/App';
 import Home from './components/home';
 import About from './components/about';
+import Exper from './components/experience';
 import store from './store';
 
 Vue.use(VueRouter);
-
+console.log(Exper,Home);
 const router = new VueRouter({
 	routes: [
 		{
@@ -25,6 +26,14 @@ const router = new VueRouter({
 			component:About,
 			beforeEnter: (to, from, next) => {
 				store.dispatch('changeState','about');
+				next();
+			}
+		},
+		{
+			path:'/experience',
+			component:Exper,
+			beforeEnter: (to, from, next) => {
+				store.dispatch('changeState','exper');
 				next();
 			}
 		}

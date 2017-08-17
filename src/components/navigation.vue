@@ -23,7 +23,7 @@ export default {
         <router-link to="/about" :class="{active:currentState == 'about'}">
             <span class="about" @click="changeState">ABOUT ME</span>
         </router-link>
-        <router-link to="/" :class="{active:currentState == 'exper'}">
+        <router-link to="/experience" :class="{active:currentState == 'exper'}">
             <span class="exper" @click="changeState">EXPERIENCE</span>
         </router-link>
         <router-link to="/" :class="{active:currentState == 'hobby'}">
