@@ -1,0 +1,146 @@
+.about-broad{
+	position:absolute;
+	right:0;
+	height:100%;
+	width: 50%;
+	background: url('../../images/trolley-2203329_1920.jpg');
+	opacity:0;
+	transition:opacity ease 1s;
+	background-size: cover;
+}
+.about-broad.about-pic{
+	opacity: 1;
+}
+
+.about-mod{
+	padding-top: 65px;
+	margin: 0 40px;
+	animation: fade-in 1s;
+    .about-title{
+	    margin-top: 60px;
+    	font-size:44px;
+    	color:#999;
+    }
+    .about-me{
+    	display: flex;
+		display: -webkit-flex;
+		margin: 20px 0;
+		.me-pic{
+			display: flex;
+			display: -webkit-flex;
+			align-items: center;
+		    -webkit-align-items: center;
+			flex:1;
+		}
+		.avatar-pic{
+			display: inline-block;
+		    height: 100%;
+		    width: 50%;
+		    margin: 0 auto;
+		    background: #999;
+		    border-radius: 50%;
+		}
+		.me-dsc{
+			flex:3;
+		}
+		.me-title{
+		    font-size: 20px;
+		    padding-bottom: 20px;
+			color: #666;
+		}
+		.dsc-small{
+			font-size:12px;
+			color:#999;
+		}
+		.me-content{
+			font-size: 14px;
+			color: #666;
+			padding-bottom: 20px;
+		}
+    }
+    .about-skill{
+    	display: flex;
+		display: -webkit-flex;
+		.skill-box{
+		    margin: 35px 10px 0 10px;
+			flex:1;
+		}
+		.skill-title{
+		    padding-bottom: 20px;
+			text-align: center;
+		    font-weight: bold;
+		    color: #666;
+		}
+		.skill-content{
+			margin-bottom: 20px;
+		}
+		.skill-icon{
+			display:inline-block;
+			width:50px;
+			height:50px;
+			vertical-align:middle;
+		}
+		.webpack-icon{
+			background-image:url('https://camo.githubusercontent.com/d18f4a7a64244f703efcb322bf298dcb4ca38856/68747470733a2f2f7765627061636b2e6a732e6f72672f6173736574732f69636f6e2d7371756172652d6269672e737667');
+		}
+		.gulp-icon{
+		    background: url(https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png) no-repeat 50%;
+			background-size: contain;
+		}
+		.grunt-icon{
+			background: url(http://gruntjs.com/img/grunt-logo-no-wordmark.svg) no-repeat 50%;
+			background-size: contain;
+		}
+		.es5-icon{
+			background: url('../../images/ES5.png') no-repeat 50%;
+			background-size: contain;
+		}
+		.es6-icon{
+			background: url('../../images/ES6.png') no-repeat 50%;
+			background-size: contain;
+		}
+		.less-icon{
+			background: url('../../images/less.png') no-repeat 50%;
+			background-size: contain;
+		}
+		.sass-icon{
+			background: url('../../images/sass.png') no-repeat 50%;
+			background-size: contain;
+		}
+		.jquery-icon{
+			background: url('../../images/jquery.png') no-repeat 50%;
+			background-size: contain;
+		}
+		.bootstrap-icon{
+			background: url(https://camo.githubusercontent.com/5d417873a11d7175ec40fc3af3c6cb024a531dd7/68747470733a2f2f676574626f6f7473747261702e636f6d2f6173736574732f6272616e642f626f6f7473747261702d736f6c69642e737667) no-repeat 50%;
+			background-size: contain;
+		}
+		.vue-icon{
+			background: url('../../images/vue.png') no-repeat 50%;
+			background-size: contain;
+		}
+		.react-icon{
+			background: url('../../images/react.png') no-repeat 50%;
+			background-size: contain;
+		}
+		.skill-name{
+			font-weight:bold;
+			font-size:14px;
+		}
+		.skill-process{
+			height: 5px;
+		    margin-top: 15px;
+		    border-radius: 10px;
+		    background: #fff;
+		    text-align: right;
+		    font-size: 12px;
+			.process-sche{
+				height:100%;
+		    	width: 0;
+				background: #666;
+		    	border-radius: 10px;
+    			transition: all ease 0.5s;
+			}
+		}
+    }
+}

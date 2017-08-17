@@ -10,7 +10,7 @@ import Exper from './components/experience';
 import store from './store';
 
 Vue.use(VueRouter);
-console.log(Exper,Home);
+
 const router = new VueRouter({
 	routes: [
 		{

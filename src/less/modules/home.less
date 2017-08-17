@@ -1,0 +1,54 @@
+.home-broad{
+	float: left;
+	height:100%;
+	width: 0;
+	background: url('../../images/tree-675073_1920.jpg');
+	transition:all ease 0.5s;
+}
+.home-broad.home-pic{
+	width: 50%;
+}
+
+.home-mod{
+	display: flex;
+	display: -webkit-flex;
+	height:100%;
+	margin: 0 40px;
+	align-items: center;
+    -webkit-align-items: center;
+    animation: fade-in 1s;
+    .home-dsc{
+    	z-index:1;
+    }
+    .home-title{
+	    color: #999;
+    }
+    .home-intro{
+	    margin: 15px 0;
+	    font-size: 42px;
+		font-weight: 300;
+    }
+    .home-cont{
+    	color:#999;
+    	font-size: 14px;
+    }
+    .home-start{
+    	display:inline-block;
+		background-color: transparent;
+		border: 3px solid #232B2B;
+		border-radius: 100px;
+		color: #232B2B;
+		font-size: 13px;
+		font-weight: bold;
+		letter-spacing: 1.6px;
+		padding: 12px 36px;
+		margin-top: 42px;
+		transition: all 0.4s ease-in-out;
+		text-transform: uppercase;
+    }
+    .home-start:hover{
+    	background: #E3AE57;
+	    border-color: transparent;
+	    color: #fff;
+    }
+}
